@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Big Shoulders Display", sans-serif;
+}
+body{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+main{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 212px;
+    padding: 30px 25px;
+    border: 1px solid black;
+}
+
+.card_head img{
+    height: 32px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 95%);
+}
+.card_detail{
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.button, .btn1{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+.btn2{
+    color: hsl(184, 100%, 22%);
+}
+
+.btn3{
+    color: hsl(179, 100%, 13%);
+}
+
+.card-1{
+    grid-column: 1/2;
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card-2{
+    grid-column: 2/3;
+    background-color: hsl(184, 100%, 22%);
+}
+.card-3{
+    grid-column: 3/4;
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 375px) and (max-width: 760px) {
+    body{
+        display: flex;
+        place-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+    main{
+        display: block;
+        grid-template-rows: repeat(3 ,1fr);
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1023px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+    body{
+        display: flexbox;
+        place-content: center;
+    }
+    main{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
